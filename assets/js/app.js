@@ -571,3 +571,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// Récupérer toutes les cartes projets
+const projectCards = document.querySelectorAll('.project-card');
+
+projectCards.forEach(card => {
+  const img = card.querySelector('img');
+  const desc = card.getAttribute('data-desc'); // description dans data-desc
+  const p = card.querySelector('p'); // le paragraphe où afficher la description
+
+  // Quand la souris passe sur l'image
+  img.addEventListener('mouseenter', () => {
+    p.textContent = desc; // mettre la description
+  });
+
+  // Optionnel : quand la souris quitte l'image, remettre le texte initial
+  img.addEventListener('mouseleave', () => {
+    p.textContent = 'Cliquez sur l’image pour voir plus de détails'; // texte par défaut
+  });
+});
