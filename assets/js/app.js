@@ -531,3 +531,43 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+// Fonction pour afficher une image en grand lors d'un clic sur .project-cover
+document.addEventListener("DOMContentLoaded", function () {
+  // On crée le modal une seule fois
+  const modal = document.createElement("div");
+  modal.style.position = "fixed";
+  modal.style.top = 0;
+  modal.style.left = 0;
+  modal.style.width = "100vw";
+  modal.style.height = "100vh";
+  modal.style.background = "rgba(0,0,0,0.7)";
+  modal.style.display = "flex";
+  modal.style.alignItems = "center";
+  modal.style.justifyContent = "center";
+  modal.style.zIndex = 10000;
+  modal.style.cursor = "pointer";
+  modal.style.visibility = "hidden"; // caché par défaut
+
+  // Image à afficher
+  const modalImg = document.createElement("img");
+  modalImg.style.maxWidth = "80vw";
+  modalImg.style.maxHeight = "80vh";
+  modalImg.style.borderRadius = "10px";
+  modal.appendChild(modalImg);
+
+  // Ajoute le modal dans le body
+  document.body.appendChild(modal);
+
+  // Ferme le modal quand on clique dessus
+  modal.addEventListener("click", function () {
+    modal.style.visibility = "hidden";
+  });
+
+  // Ajoute le listener à toutes les images de projet
+  document.querySelectorAll(".project-cover").forEach(function (img) {
+    img.addEventListener("click", function () {
+      modalImg.src = img.src;
+      modal.style.visibility = "visible";
+    });
+  });
+});
