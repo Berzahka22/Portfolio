@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berzahka Bebdanne Benyaamin— Développeur Full‑Stack </title>
+  <meta name="description" content="Portfolio professionnel de développeur full‑stack  Nom: berzahka bebdanne benyaamin : projets, compétences, et contact." />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (scroll animations) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- GSAP (hero/text animations) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+
+  <!-- Swiper (projects slider) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-slate-950/70 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="font-semibold tracking-tight text-lg">Berzahka Bebdanne Benyaamin<span class="text-indigo-400">.</span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#projets" class="hover:text-indigo-300">Projets</a>
+        <a href="#competences" class="hover:text-indigo-300">Compétences</a>
+        <a href="#parcours" class="hover:text-indigo-300">Parcours</a>
+        <a href="#contact" class="hover:text-indigo-300">Contact</a>
+      </nav>
+      <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-indigo-500/90 hover:bg-indigo-400 px-4 py-2 text-sm font-medium transition">
+        <i class="fa-solid fa-paper-plane"></i> Me contacter
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-40">
+      <div class="hero-grid"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+       
+        <p class="mt-4 text-slate-300 max-w-xl" data-aos="fade-up" data-aos-delay="150">
+           <h1   data-aos="fade-up">
+        je m'appelle je m'appelle <b class="font-bold text-white">Berzahka Bebdanne BenyaAmin</b>
+
+        </h1>
+        un développeur full‑stack junior basé à <b>Douala</b>. Actuellement titulaire d'une Licence Technologique et Diplome Universitaire de Technologie(D.U.T) en Génie Logiciel, je suis à la recherche d'une opportunité de stage ou d'emploi pour mettre en pratique mes compétences et contribuer à des projets innovants. Je conçois des applications web modernes et performantes avec des langage de programationt tel que <b>HTML</b>, <b>JavaScript</b>, <b>CSS</b> ainsi que de Framwork comme <b>Laravel</b>,<b>Tailwind</b>, <b>Node.js</b>, et avec <b>MySQL</b>. Passionné par la donnée et le design responsive, j’aime transformer des idées en Interface utiles.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="250">
+          <a href="#projets" class="btn-primary"><i class="fa-solid fa-diagram-project"></i> Voir mes projets</a>
+          <a href="assets/CV.pdf" class="btn-ghost" download><i class="fa-solid fa-file-arrow-down"></i> Télécharger mon CV</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-slate-400 text-sm" data-aos="fade-up" data-aos-delay="350">
+          <span class="inline-flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> Email vérifié</span>
+          <span class="inline-flex items-center gap-2"><i class="fa-solid fa-lock"></i> Formulaire sécurisé</span>
+        </div>
+      </div>
+      <div class="relative" data-aos="zoom-in">
+        <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-indigo-500/20 to-cyan-500/20 ring-1 ring-white/10 p-2">
+           <img src="assets/img/IMG-20250728-WA0100.jpg" alt="">
+        </div>
+        <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+          <div class="stats-card bg-slate-800/90 backdrop-blur">
+            <p class="text-xs uppercase tracking-widest text-slate-400">Full-Stack</p>
+            <p class="font-semibold">Tailwind•Laravel•MySQL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section id="projets" class="py-20 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <center><h2 class="section-title" data-aos="fade-right">Mes projets</h2></center>
+      <div class="swiper mySwiper mt-8" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide project-card" 
+             data-title="Alumni-IUT" 
+            data-desc="Alumni-IUT est une plateforme de gestion des anciens étudiants développée avec Laravel, qui permet aux diplômés de l'IUT de maintenir un réseau professionnel actif. Le système intègre une authentification par email et un tableau de bord personnalisé où les anciens étudiants peuvent mettre à jour leurs profils, partager leurs expériences professionnelles et consulter les actualités de leur promotion. Les entreprises partenaires peuvent publier des offres d'emploi ciblées, créant ainsi un pont direct entre les recruteurs et les diplômés de l'IUT, tandis que les anciens étudiants peuvent postuler directement via la plateforme." 
+            data-img="assets/img/p1.jpg">
+            <img src="assets/img/p1.jpg" alt="Alumni-IUT" class="project-cover cursor-pointer"/>
+             <div class="p-4">
+             <h3 class="font-semibold">Alumni-IUT</h3>
+              <p class="text-sm text-slate-300">Gestion des anciens étudiants (Laravel, Auth email, Dashboard).</p>
+            </div>
+          </div>
+
+
+          <div class="swiper-slide project-card" 
+             data-title="GesPrO" 
+            data-desc="esPrO est une application web développée pour l'IUT de Ngaoundéré qui centralise et simplifie la gestion des projets étudiants. La plateforme permet aux étudiants de soumettre leurs projets, de suivre leur avancement et de collaborer avec leurs encadrants, tandis que les enseignants peuvent assigner des projets, évaluer les rendus et gérer les soutenances. L'interface responsive, construite avec une stack moderne (Tailwind, Bootstrap, PHP/MySQL), offre un tableau de bord intuitif pour tous les utilisateurs.." 
+            data-img="assets/img/p2.jpg">
+            <img src="assets/img/p2.jpg" alt="GesPrO" class="project-cover cursor-pointer"/>
+             <div class="p-4">
+            <h3 class="font-semibold">GesPrO</h3>
+            <p class="text-sm text-slate-300">Application Web de GEstion des Projest des etudiant de l'IUT de Ngaoundéré ( HTLM, CSS, Tailwind, Bootstrap, JS, PHP/MySQL).</p>
+           
+            </div>
+          </div>
+
+          <div class="swiper-slide project-card" 
+             data-title="GesMoT" 
+            data-desc="GesMoT est une application web spécialisée dans la gestion des moteurs industriels pour entreprises. Le système permet de suivre l'inventaire des moteurs, leur état de fonctionnement, les maintenances planifiées et l'historique des réparations. L'interface utilisateur, développée avec Bootstrap et JavaScript, offre des fonctionnalités de recherche avancée et un tableau de bord pour monitorer l'état du parc de moteurs en temps réel.." 
+            data-img="assets/img/p3.jpg">
+            <img src="assets/img/p3.jpg" alt="GesMoT" class="project-cover cursor-pointer"/>
+             <div class="p-4">
+                 <h3 class="font-semibold">GesMoT </h3>
+              <p class="text-sm text-slate-300">Application de gestion de Moteurs d'une engtreprise (HTLM, CSS, JS, MySQL, Bootstrap).</p>
+            </div>
+          </div>
+          <div class="swiper-slide project-card" 
+             data-title="GameTime" 
+            data-desc="GameTime est une application dédiée à la communauté du basketball de Ngaoundéré, permettant de promouvoir les talents locaux. La plateforme sert de vitrine pour les joueurs tout en proposant un espace e-commerce pour les équipements et accessoires de basketball locaux. L'application combine ainsi la promotion sportive et le commerce local dans une interface utilisateur intuitive et un espace Chat entre joueurs, entraineurs et toute la  communauté ." 
+            data-img="assets/img/p4.jpg">
+            <img src="assets/img/p4.jpg" alt="Alumni-IUT" class="project-cover cursor-pointer"/>
+             <div class="p-4">
+                 <h3 class="font-semibold">GameTime</h3>
+              <p class="text-sm text-slate-300">Application des joueurs de basket de la ville de Ngaoundéré en faisant la promotion des talent.</p>
+            </div>  
+          
+        </div>
+       
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+
+  
+  <section id="competences" class="py-20 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <center><h2 class="section-title" data-aos="fade-right">Mes Compétences</h2></center>
+    
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+       
+      <div class="skill-card" data-aos="flip-left">
+        <i class="fa-solid fa-code text-2xl"></i>
+        <h3 class="font-semibold mt-2">Front‑End</h3>
+        <p class="text-slate-300 text-sm">HTML, CSS, Tailwind, JS, Bosststrap, Interface respinsif & Ergonomique</p>
+      </div>
+      <div class="skill-card" data-aos="flip-left" data-aos-delay="150">
+        <i class="fa-solid fa-server text-2xl"></i>
+        <h3 class="font-semibold mt-2">Back‑End</h3>
+        <p class="text-slate-300 text-sm">PHP (Laravel), Node.js, Auth & APIs.</p>
+      </div>
+      <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+        <i class="fa-solid fa-database text-2xl"></i>
+        <h3 class="font-semibold mt-2">Base de Données</h3>
+        <p class="text-slate-300 text-sm">MySQL, MongoDB, optimisation & sécurité.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Parcours -->
+  <section id="parcours" class="py-20 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4">
+      <center><h2 class="section-title" data-aos="fade-right">Parcours</h2></center>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="timeline" data-aos="fade-up">
+          <h3 class="font-semibold">Formations</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-300">
+            <li>Licence Technologique en Génie Logiciel (IUT de Ngaoundéré)</li>
+            <li>DUT en Génie Logiciel (IUT de Ngaoundéré)</li>
+            <li>Baccalauréat TI (Lycée classique de Ngaoundéré)</li>
+          </ul>
+        </div>
+        <div class="timeline" data-aos="fade-up" data-aos-delay="150">
+          <h3 class="font-semibold">Expériences</h3>
+          <ul class="mt-4 space-y-3 text-sm text-slate-300">
+            <li>Stage Academique Licences Technologique (IUT de Ngaoundéré)</li>
+            <li>Stage Academique D.U.T (Centre de Developpement des TIC de Ngaoundéré)</li>
+            <li>Stage Academique Niveaux 1 (ASM‑Africk Bertoua)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<section id="contact" class="py-20 border-t border-white/10">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-right">Contact</h2>
+    <div class="bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-700">
+     <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Honeypot anti-spam -->
+        <input type="hidden" name="access_key" value="cb2cabae-c1d8-47c5-9ab8-37cc9b586225">
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block mb-2 text-sm font-semibold" for="name">Nom complet</label>
+            <input class="input w-full p-2 rounded bg-slate-700 border border-slate-600" id="name" name="name" type="text" placeholder="Votre nom" required minlength="2" />
+          </div>
+          <div>
+            <label class="block mb-2 text-sm font-semibold" for="email">Email</label>
+            <input class="input w-full p-2 rounded bg-slate-700 border border-slate-600" id="email" name="email" type="email" placeholder="votre email.com" value="berzahkabebdannebenyaamin22@gmail.com" />
+          </div>
+        </div>
+<div>
+          <label class="block mb-2 text-sm font-semibold" for="subject">Email du client</label>
+          <input class="input w-full p-2 rounded bg-slate-700 border border-slate-600" id="subject" name="email" type="email" placeholder="Votre Email" required minlength="3" />
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-semibold" for="subject">Sujet</label>
+          <input class="input w-full p-2 rounded bg-slate-700 border border-slate-600" id="subject" name="subject" type="text" placeholder="Sujet du message" required minlength="3" />
+        </div>
+        <div>
+          <label class="block mb-2 text-sm font-semibold" for="message">Message</label>
+          <textarea class="input w-full p-2 rounded bg-slate-700 border border-slate-600 min-h-[140px]" id="message" name="message" placeholder="Écrivez votre message..." required minlength="10"></textarea>
+        </div>
+
+        <div class="flex items-center justify-between mt-4">
+          <div class="text-xs text-slate-400">Protégé par validation côté client, vérification serveur et honeypot.</div>
+          <button 
+              type="submit" 
+              > 
+              <i class="fa-solid fa-paper-plane" id="btnIcon"></i>
+              <span id="btnText">Envoyer</span>
+          </button>
+        </div>
+      </form>
+       <center><div class="flex items-center gap-4">
+     <a href="https://github.com/Berzahka22" target="_blank"><i class="fa-brands fa-github text-3xl"></i></a>
+     <a href="#" target="_blank"><i class="fa-brands fa-linkedin text-3xl"></i></a>
+      <a href="mailto:berzahkabebdannebenyaamin22@gmail.com"><i class="fa-solid fa-envelope text-3xl"></i></a>
+    <a href="https://wa.me/237697805465" target="_blank">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+      </div>
+</center>
+
+      <div id="formAlert" class="mt-4 text-center"></div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-400 flex flex-wrap items-center justify-between gap-4">
+      <p>© <span id="year"></span> Berzahka Bebdanne Benyaamin — Développeur Full-Stack</p>
+     
+    </div>
+    
+  </footer>
+
+
+
+<script src="assets/js/app.js"></script>
+<!-- Modal -->
+<div id="projectModal" class="fixed inset-0 bg-black/70 flex items-center justify-center hidden z-50">
+  
+</div>
+
+
+</body>
+</html>
